@@ -1,0 +1,13 @@
+{% extends "sign_base.html" %} {% block title %}Signin{% endblock %}
+<!--redirect to registration html  -->
+{% block redirect %}
+<a class="nav-link" href="/register">Sign up</a> {% endblock %} {% block sign-content %}
+<form action="{% url 'sign_in' %}" method="post">
+    <h1 class="form-heading">Mock Internet Trader.</h1>
+    <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+    <input type="password" name="password" class="form-control" placeholder="Password" required autofocus>
+    <a id="reset-link" href="{% url 'password_reset' %}">Forget Password ?</a>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    {% csrf_token %}
+</form>
+{% endblock %}

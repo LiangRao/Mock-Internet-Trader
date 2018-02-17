@@ -1,0 +1,21 @@
+#card-part {
+    background: white;
+    color: black;
+}
+
+.create-form {
+    margin: 20px;
+}
+
+.trade-info {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.create-label {
+    font-weight: bold;
+}
+.fa-question{
+    color: #3978A6;
+    font-size: 16px;
+}

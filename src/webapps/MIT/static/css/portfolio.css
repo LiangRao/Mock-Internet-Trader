@@ -1,0 +1,96 @@
+#card-part {
+    background: white;
+    color: black;
+}
+
+.item-list {
+    display: inline-block;
+}
+
+.item-list li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+
+
+.header-small {
+    height: 10px;
+    color: grey;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.header {
+    height: 10px;
+    font-weight: bold;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    background: #FF9C33;
+    position: absolute;
+    left: 950px;
+    top: -15px;
+}
+
+.circle h6 {
+    margin-bottom: 200px;
+    width: 100px;
+    color: black;
+    position: relative;
+    top: 15px;
+}
+
+#profile {
+    height: 49px;
+    width: 1080px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.comp {
+    width: 150px;
+    padding: 10px;
+    margin-left: 80px;
+}
+
+.comp:first-child {
+    margin-left: 0px;
+}
+
+.comp:nth-child(5) {
+    margin-left: 0px;
+}
+
+#graph {
+    width: 800px;
+    height: 90px;
+}
+
+.fa-question {
+    color: #3978A6;
+    font-size: 14px;
+}
+.header-gains{
+    color: red;
+}
+.header-lost{
+    color: green;
+}

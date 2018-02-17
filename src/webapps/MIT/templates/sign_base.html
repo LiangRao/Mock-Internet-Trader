@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} </title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap-4/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/navbar.css' %}" rel="stylesheet">
+    <link href="{% static 'css/signform.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">M</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="static/images/icons/plus.png" height="30" width="30" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                {% block redirect %}{% endblock %}
+            </ul>
+        </div>
+    </nav>
+    <!-- Display error message -->
+    <div class="error-display">
+        <ul class="error-list">
+            {% for key,value in form.errors.items %}
+            <li class="single-error-message">
+                {{ key|escape }} {{ value|escape }}
+            </li>
+            {% endfor %} {% if message %}
+            <li class="single-error-message">
+                <p> {{ message }} </p>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <!-- Sign up form -->
+    <div class="sign-form">
+        {% block sign-content %} {% endblock %}
+    </div>
+    <div class="welcome">
+        {% block content %} {% endblock %}
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+</body>
+
+</html>

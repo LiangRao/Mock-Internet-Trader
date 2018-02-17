@@ -1,0 +1,85 @@
+body {
+    background-color: #37465C;
+    position: static;
+    left: auto;
+    text-align: left;
+}
+
+.sign-form {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.sign-form .form-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Silom';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    color: #FFFFFF;
+}
+
+.sign-form .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.sign-form .form-control:focus {
+    z-index: 2;
+}
+
+.sign-form input[type="text"],
+input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.sign-form input[type="password"] {
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.sign-form button[type="submit"] {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: arial;
+    background-color: #3399FF;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.sign-form p,
+a[id='reset-link'] {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: arial;
+    color: white;
+}
+
+.placeholderreset {
+    width: 300px;
+    height: 45px;
+    margin-left: 0px;
+}
+
+tr.reset {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 16px;
+    margin: 20px;
+}
+
+tr.reset:focus {
+    z-index: 2;
+}

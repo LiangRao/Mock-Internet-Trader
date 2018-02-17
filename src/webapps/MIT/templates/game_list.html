@@ -1,0 +1,30 @@
+{% extends "game_base.html" %} {% block title %}My Games{% endblock %}
+
+<!-- Custom styles for this template -->
+{% block static %}
+<link href="/static/css/find_game.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<nav class="nav" id="nav-tab">
+    <a class="nav-link disabled" href="{% url 'find_game' %}">FIND GAME</a>
+    <a class="nav-link active" href="{% url 'my_game_list' %}">MY GAME</a>
+    <a class="nav-link disabled" href="{% url 'create_game' %}">CREATE GAME</a>
+</nav>
+
+<div class="card">
+    <div class="card-header">
+        Game list
+    </div>
+    <div class="card-block" id="card-part">
+      <ul class="game-list" style="list-style: none;">
+        {% for game in games %}
+            <li>
+                <a href="{% url 'game_overview' game.id %}" class="card-item"><u>{{ game }}</u></a>
+                <br>
+            </li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>
+{% endblock %}

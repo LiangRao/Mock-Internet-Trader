@@ -1,0 +1,55 @@
+{% extends "game_base.html" %} {% block title %}Find Game{% endblock %}
+<!-- Custom styles for this template -->
+{% block static %}
+<link href="/static/css/find_game.css" rel="stylesheet"> {% endblock %} {% block content %}
+<nav class="nav" id="nav-tab">
+    <a class="nav-link active" href="{% url 'find_game' %}">FIND GAME</a>
+    <a class="nav-link disabled" href="{% url 'my_game_list' %}">MY GAME</a>
+    <a class="nav-link disabled" href="{% url 'create_game' %}">CREATE GAME</a>
+</nav>
+<div class="card">
+    <div class="card-header">
+        Search a game
+    </div>
+    <div class="card-block" id="card-part">
+        <blockquote class="card-blockquote">
+            <form action="{% url 'search_game' %}" method="get">
+                <input id="search-game" name="name" type="text" placeholder="Search Games">
+                <button type="submit" class="btn btn-link">
+                    <span class="material-icons">search</span>
+                </button>
+            </form>
+        </blockquote>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        Find a game
+    </div>
+    <div class="card-block" id="card-part">
+        <ul class="game-list">
+            {% for game in games %}
+            <li>
+                <a href="{% url 'game_overview' game.id %}" class="card-item"><u>{{ game.name }}</u></a>
+                <br>
+                <p class="item-content">{{ game.description }}</p>
+                <table width="90%">
+                    <tr>
+                        <th>STARTS ON</th>
+                        <th>ENDS IN</th>
+                        <th>PLAYERS</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>{{ game.start_time }}</td>
+                            <td>{{ game.end_time }}</td>
+                            <td>{{ game.counter }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <hr align="left" width="80%"> {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

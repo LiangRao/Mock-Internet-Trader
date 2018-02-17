@@ -1,0 +1,373 @@
+[2017-11-24 03:11:52,625: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 2.00 seconds...
+
+[2017-11-24 03:11:54,653: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 4.00 seconds...
+
+[2017-11-24 03:11:58,676: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 6.00 seconds...
+
+[2017-11-24 03:12:04,706: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 8.00 seconds...
+
+[2017-11-24 03:12:12,733: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 10.00 seconds...
+
+[2017-11-24 03:12:22,786: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 12.00 seconds...
+
+[2017-11-24 03:12:34,821: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 14.00 seconds...
+
+[2017-11-24 03:12:48,854: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 16.00 seconds...
+
+[2017-11-24 03:13:13,142: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 2.00 seconds...
+
+[2017-11-24 03:13:15,154: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 4.00 seconds...
+
+[2017-11-24 03:13:19,171: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 6.00 seconds...
+
+[2017-11-24 03:13:25,196: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 8.00 seconds...
+
+[2017-11-24 03:13:33,212: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 10.00 seconds...
+
+[2017-11-24 03:13:43,242: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 12.00 seconds...
+
+[2017-11-24 03:13:55,265: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 14.00 seconds...
+
+[2017-11-24 03:14:09,308: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 16.00 seconds...
+
+[2017-11-24 03:14:25,333: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 18.00 seconds...
+
+[2017-11-24 03:14:43,369: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 20.00 seconds...
+
+[2017-11-24 03:15:03,420: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 22.00 seconds...
+
+[2017-11-24 03:15:25,463: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 24.00 seconds...
+
+[2017-11-24 03:15:49,529: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 26.00 seconds...
+
+[2017-11-24 03:16:15,580: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 28.00 seconds...
+
+[2017-11-24 03:16:43,642: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 30.00 seconds...
+
+[2017-11-24 03:17:13,739: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:17:45,860: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:18:17,976: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:18:50,052: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:19:22,126: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:19:54,245: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:20:26,350: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:20:58,454: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:21:30,572: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:22:02,660: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:22:34,753: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:23:06,851: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:23:38,952: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:24:11,059: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:24:43,159: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:25:15,248: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:25:47,342: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:26:19,445: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:26:51,542: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:27:23,644: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:27:55,750: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:28:27,857: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:28:59,965: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:29:32,066: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:30:04,117: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:30:36,196: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:31:08,321: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:31:40,425: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:32:12,530: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:32:44,624: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:33:16,723: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:33:48,814: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:34:20,905: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:34:53,019: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:35:25,156: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:35:57,273: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:36:29,395: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:37:01,509: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:37:33,601: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:38:05,690: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:38:37,786: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:39:09,886: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:39:42,094: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:40:14,321: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:40:46,507: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:41:18,693: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:41:50,912: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:42:23,115: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:42:55,272: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:43:27,489: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:43:59,562: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:44:31,628: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:45:03,688: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:45:35,762: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:46:07,867: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:46:39,975: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:47:12,065: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:47:44,178: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:48:16,301: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:48:48,386: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:49:20,459: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:49:52,572: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:50:24,683: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:50:56,798: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:51:28,884: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:52:01,014: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:52:33,096: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:53:05,171: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:53:37,242: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:54:09,304: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:54:41,370: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:55:13,434: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:55:45,488: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:56:17,539: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:56:49,597: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:57:21,646: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:57:53,733: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:58:25,824: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:58:57,904: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 03:59:30,001: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 04:00:02,084: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 04:00:34,164: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 04:01:06,254: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 04:01:38,335: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 04:02:10,420: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 61] Connection refused.
+Trying again in 32.00 seconds...
+
+[2017-11-24 04:02:42,496: CRITICAL/MainProcess] Unrecoverable error: OperationalError(u'[Errno 61] Connection refused',)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/celery/worker/worker.py", line 203, in start
+    self.blueprint.start(self)
+  File "/usr/local/lib/python2.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/usr/local/lib/python2.7/site-packages/celery/bootsteps.py", line 370, in start
+    return self.obj.start()
+  File "/usr/local/lib/python2.7/site-packages/celery/worker/consumer/consumer.py", line 320, in start
+    blueprint.start(self)
+  File "/usr/local/lib/python2.7/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/usr/local/lib/python2.7/site-packages/celery/worker/consumer/connection.py", line 21, in start
+    c.connection = c.connect()
+  File "/usr/local/lib/python2.7/site-packages/celery/worker/consumer/consumer.py", line 407, in connect
+    conn = self.connection_for_read(heartbeat=self.amqheartbeat)
+  File "/usr/local/lib/python2.7/site-packages/celery/worker/consumer/consumer.py", line 414, in connection_for_read
+    self.app.connection_for_read(heartbeat=heartbeat))
+  File "/usr/local/lib/python2.7/site-packages/celery/worker/consumer/consumer.py", line 438, in ensure_connected
+    callback=maybe_shutdown,
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 405, in ensure_connection
+    callback)
+  File "/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/contextlib.py", line 35, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 419, in _reraise_as_library_errors
+    sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 414, in _reraise_as_library_errors
+    yield
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 405, in ensure_connection
+    callback)
+  File "/usr/local/lib/python2.7/site-packages/kombu/utils/functional.py", line 333, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 261, in connect
+    return self.connection
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 802, in connection
+    self._connection = self._establish_connection()
+  File "/usr/local/lib/python2.7/site-packages/kombu/connection.py", line 757, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/usr/local/lib/python2.7/site-packages/kombu/transport/pyamqp.py", line 130, in establish_connection
+    conn.connect()
+  File "/usr/local/lib/python2.7/site-packages/amqp/connection.py", line 282, in connect
+    self.transport.connect()
+  File "/usr/local/lib/python2.7/site-packages/amqp/transport.py", line 109, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/usr/local/lib/python2.7/site-packages/amqp/transport.py", line 150, in _connect
+    self.sock.connect(sa)
+  File "/usr/local/Cellar/python/2.7.13/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+OperationalError: [Errno 61] Connection refused

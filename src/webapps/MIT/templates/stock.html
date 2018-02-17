@@ -1,0 +1,76 @@
+{% extends "game_base.html" %} {% block title %}Stock Display{% endblock %}
+<!-- Custom styles for this template -->
+{% block static %}
+<link href="/static/css/stock.css" rel="stylesheet">
+<script src="/static/js/stock.js" type="text/javascript"></script>
+<script src="/static/js/jquery.csv.min.js" type="text/javascript"></script>
+<script src="/static/js/echarts.min.js"></script>
+{% endblock %} {% block content %}
+<div class="game-name">
+    {{ game }}
+</div>
+<!-- navigation tabs, TODO! -->
+<nav class="nav" id="nav-tab">
+    <a class="nav-link disabled" href="{% url 'game_overview' game.id %}">OVERVIEW</a>
+    <a class="nav-link disabled" href="{% url 'ranking' game.id %}">RANKING</a>
+    <a class="nav-link disabled" href="{% url 'portfolio' game.id player.id %}" id="portfolio-tab" style="color: #373739">PORTFOLIO</a>
+    <a class="nav-link active" href="{% url 'stock' game.id %}">STOCKS</a>
+</nav>
+<div class="card">
+    <div class="card-header bar-display">
+        Quote Infomation
+    </div>
+    <input type="hidden" value="{{ game.id }}" id="gameID">
+    <input type="hidden" value="{{ player.id }}" id="playerID">
+    <div class="card-block" id="card-part">
+        <blockquote class="card-blockquote">
+            <div id="stock-graph"></div>
+            <table class="stock-info" width="90%">
+                <tr>
+                    <th>NAME</th>
+                    <th>VALUE</th>
+                    <th>NET CHANGE</th>
+                    <th>% CHANCE</th>
+                    <th>ONE MONTH</th>
+                    <th>TIME(EDT)</th>
+                    <th></th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-link" name="DowJones">DOW JOHNS INDUS. AVG</button>
+                        </td>
+                        <td>{{ DJIValue }}</td>
+                        <td>{{ DJINet }}</td>
+                        <td>{{ DJIChance }}</td>
+                        <td>{{ DJIMonth }}</td>
+                        <td>{{ IndexTime }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-link" name="SP500">S&P500 INDEX</button>
+                            <!-- <a href="#" class="index-link" id="index-link" name="SP500"></a> -->
+                        </td>
+                        <td>{{ SPXValue }}</td>
+                        <td>{{ SPXNet }}</td>
+                        <td>{{ SPXChance }}</td>
+                        <td>{{ SPXMonth }}</td>
+                        <td>{{ IndexTime }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-link" name="Nasdaq">Nasdap</button>
+                        </td>
+                        <td>{{ IXICValue}}</td>
+                        <td>{{ IXICNet}}</td>
+                        <td>{{ IXICChance}}</td>
+                        <td>{{ IXICMonth}}</td>
+                        <td>{{ IndexTime}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </blockquote>
+    </div>
+</div>
+<script src="/static/js/control_tab.js" type="text/javascript"></script>
+{% endblock %}

@@ -1,0 +1,473 @@
+{% extends "game_base.html" %} {% block title %}Game Overview{% endblock %}
+<!-- Custom styles for this template -->
+{% block static %}
+<link href="/static/css/overview.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="/static/js/jquery.csv.min.js" type="text/javascript"></script>
+<script src="/static/js/echarts.js"></script>
+{% endblock %} {% block content %}
+<div class="game-name"> {{ game }} {% if join == False %}
+    <a href="{% url 'leave_game' game.id %}" class="btn btn-primary" id="join-btn">Leave!</a> {% else %}
+    <a href="{% url 'join_game' game.id %}" class="btn btn-primary" id="join-btn">Join!</a> {% endif %}
+</div>
+<!-- navigation tabs, TODO! -->
+<nav class="nav" id="nav-tab">
+    <a class="nav-link active" href="{% url 'game_overview' game.id %}">OVERVIEW</a>
+    <a class="nav-link disabled" href="{% url 'ranking' game.id %}">RANKING</a>
+    <a class="nav-link disabled" href="{% url 'portfolio' game.id player.id %}" id="portfolio-tab" style="color: #373739">PORTFOLIO</a>
+    <a class="nav-link disabled" href="{% url 'stock' game.id %}">STOCKS</a>
+</nav>
+<!-- display game info  -->
+<div id="stock-graph"></div>
+<input type="hidden" value="{{ player.id }}" id="playerID">
+<input type="hidden" value="{{ game.id }}" id="gameID"> {% if join == False %}
+<div class="card">
+    <div class="card-header">
+        Symbol Search / Trade
+    </div>
+    <div class="card-block" id="card-part">
+        <blockquote class="card-blockquote">
+            <form>
+                <input id="search-symbol" type="text" placeholder="Enter Symbol">
+                <button type="button" class="my_popup_open btn btn-link" id="search-icon" disabled>
+                    <span class="material-icons">search</span>
+                </button>
+            </form>
+        </blockquote>
+    </div>
+</div>
+{% endif %}
+<div class="card">
+    <div class="card-header">
+        About This Game
+    </div>
+    <div class="card-block" id="card-part">
+        <blockquote class="card-blockquote">
+            <table class="table table-condensed">
+                <tr>
+                    <td class="overview-table">
+                        <h6 class="card-item">Description: </h6></td>
+                    <td>
+                        <p class="item-content">{{ game.description }}&nbsp;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-table">
+                        <h6 class="card-item">Start Time: </h6></td>
+                    <td>
+                        <p class="item-content">{{ game.start_time }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-table">
+                        <h6 class="card-item">End Time: </h6></td>
+                    <td>
+                        <p class="item-content">{{ game.end_time }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-table">
+                        <h6 class="card-item">Current Players: </h6></td>
+                    <td>
+                        <p class="item-content">{{ game.get_playernumber }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-table">
+                        <h6 class="card-item">Created By: </h6></td>
+                    <td>
+                        <p class="item-content">{{ game.get_creator }}</p>
+                    </td>
+                </tr>
+            </table>
+        </blockquote>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        Basic Settings
+    </div>
+    <div class="card-block" id="card-part">
+        <blockquote class="card-blockquote">
+            <table class="table table-condensed">
+                <tr>
+                    <td class="overview-setting">
+                        <h6 class="card-item">TRADED INDEXES: </h6></td>
+                    <td>
+                        <ul class="item-list">
+                            <li> • S & P 500
+                            </li>
+                            <li> • Dow Jones
+                            </li>
+                            <li> • Nasdap
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-setting">
+                        <h6 class="card-item">TRADED EXCHANGES: </h6>
+                    </td>
+                    <td>
+                        <ul class="item-list">
+                            <li> • AMEX
+                            </li>
+                            <li> • Nasap
+                            </li>
+                            <li> • NYSE
+                            </li>
+                            <li> • OTC-BB
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-setting">
+                        <h6 class="card-item">STARTING BALANCE: </h6>
+                    </td>
+                    <td>
+                        <p class="item-content">{{ game.starting_balance }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-setting">
+                        <h6 class="card-item">SHORT SELLING: </h6>
+                    </td>
+                    <td>{% if game.short %}
+                        <p class="item-content">ENABLE</p>
+                        {% else %}
+                        <p class="item-content">DISABLE</p>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-setting">
+                        <h6 class="card-item">STOP LOSS: </h6>
+                    </td>
+                    <td>
+                        {% if game.stop %}
+                        <p class="item-content">ENABLE</p>
+                        {% else %}
+                        <p class="item-content">DISABLE</p>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="overview-setting">
+                        <h6 class="card-item">LIMIT ORDERS: </h6>
+                    </td>
+                    <td>
+                        {% if game.limit %}
+                        <p class="item-content">ENABLE</p>
+                        {% else %}
+                        <p class="item-content">DISABLE</p>
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+        </blockquote>
+    </div>
+</div>
+<!-- pop up window to display specific symbol info -->
+<div id="my_popup">
+    <div class="card" id="popcard">
+        <div class="card-header" id="popheader">
+            Quote Infomation
+        </div>
+        <div>
+            <h5 id="company">Current Quote</h5>
+            <hr class="featurette-divider">
+        </div>
+        <div>
+            <h2 id="curQuote"></h2>
+            <hr class="featurette-divider">
+        </div>
+        <div id="quoteImg"></div>
+        <div class="card-block" id="popblock">
+            <button class="trade_popup_open my_popup_close btn btn-primary" id="tradeBtn">TRADE NOW</button>
+            <button class="my_popup_close btn btn-danger" id="closeBtn">CLOSE</button>
+        </div>
+    </div>
+</div>
+<!-- Add content to the popup -->
+<div id="trade_popup">
+    <div class="card" id="popcard">
+        <div class="card-header" id="popheader">
+            Trader Order
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default" id="buybtn" style="background-color:#157EF9">BUY</button>
+            {% if game.short %}
+            <button type="button" class="btn btn-default" id="sellshortbtn">SELL SHORT</button>
+            {% else %}
+            <button type="button" class="btn btn-default" disabled>SELL SHORT</button>
+            {% endif %}
+            <button type="button" class="btn btn-default" id="sellbtn">SELL</button>
+            {% if game.short %}
+            <button type="button" class="btn btn-default" id="coverbtn">COVER</button>
+            {% else %}
+            <button type="button" class="btn btn-default" disabled>COVER</button>
+            {% endif %}
+        </div>
+        <div id="buyDiv">
+            <div>
+                <h5 class="company"></h5>
+                <hr class="featurette-divider">
+            </div>
+            <form action="{% url 'buy_stock' game.id %}" method="post">
+                <div>
+                    <!-- how many shares to trade -->
+                    <input type="text" name="shares" id="shares" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <span id="unit">SHARES</span>
+                    <br/>
+                    <small id="key">PRICE TYPE</small>
+                    <div class="form-group">
+                        <select class="selectpicker form-control col-sm-7" id="buy-selectpicker">
+                            <option value="Market">Market</option>
+                            {% if game.limit %}
+                            <option>Limit</option>
+                            {% endif %} {% if game.stop %}
+                            <option>Stop</option>
+                            {% endif %}
+                        </select>
+                        <div class="form-group col-sm-4 price-input">
+                            <label class="sr-only" for="exampleInputAmount">Price (in dollars)</label>
+                            <div class="input-group ">
+                                <div class="input-group-addon">$</div>
+                                <input class="form-control input-price" id="exampleInputAmount" type="text" onkeypress="return isNumberKey(this, event);" disabled>
+                                <!-- stock name -->
+                                <input name="stock_name" type="hidden">
+                                <!-- stock market price -->
+                                <input id="market-price" type="hidden">
+                                <!-- stock stop/limit price(input by player) -->
+                                <input name="price" type="hidden">
+                                <input type="hidden" name="transaction_type" id="buy-type" value="BUY">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h5 id="summary">Order Summary</h5>
+                        </div>
+                        <table class="summary-table">
+                            <tr>
+                                <td class="td1">Price per share</td>
+                                <td class="td2" id="share-price"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Shares</td>
+                                <td class="td2" id="share-num"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Total</td>
+                                <td class="td2" id="total-price"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card-block" id="popblock">
+                        <button type="submit" class="btn btn-success" id="tradeBtn">SUBMIT ORDER</button>
+                        <button class="trade_popup_close btn btn-danger" id="closeBtn">CLOSE</button>
+                    </div>
+                    {% csrf_token %}
+            </form>
+            </div>
+        </div>
+        <div style="display: none" id="sellShortDiv">
+            <div>
+                <h5 class="company"></h5>
+                <hr class="featurette-divider">
+            </div>
+            <form action="{% url 'buy_stock' game.id %}" method="post">
+                <div>
+                    <!-- how many shares to trade -->
+                    <input type="text" name="shares" id="short-shares" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <span id="unit">SHARES</span>
+                    <br/>
+                    <small id="key">PRICE TYPE</small>
+                    <div class="form-group">
+                        <select class="selectpicker form-control col-sm-7" id="short-selectpicker">
+                            <option value="Market">Market</option>
+                            {% if game.limit %}
+                            <option>Limit</option>
+                            {% endif %} {% if game.stop %}
+                            <option>Stop</option>
+                            {% endif %}
+                        </select>
+                        <div class="form-group col-sm-4 price-input">
+                            <label class="sr-only" for="exampleInputAmount">Price (in dollars)</label>
+                            <div class="input-group ">
+                                <div class="input-group-addon">$</div>
+                                <input class="form-control input-price" id="exampleInputAmount" name="short-input-price" type="text" onkeypress="return isNumberKey(this, event);" disabled>
+                                <!-- stock name -->
+                                <input name="stock_name" type="hidden">
+                                <!-- stock market price -->
+                                <input id="market-price" type="hidden">
+                                <!-- stock stop/limit price(input by player) -->
+                                <input name="price" type="hidden">
+                                <input type="hidden" name="transaction_type" id="short-type" value="SHORT">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h5 id="summary">Order Summary</h5>
+                        </div>
+                        <table class="summary-table">
+                            <tr>
+                                <td class="td1">Price per share</td>
+                                <td class="td2" id="short-share-price"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Shares</td>
+                                <td class="td2" id="short-share-num"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Total</td>
+                                <td class="td2" id="short-total-price"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card-block" id="popblock">
+                        <button type="submit" class="btn btn-success" id="tradeBtn">SUBMIT ORDER</button>
+                        <button class="trade_popup_close btn btn-danger" id="closeBtn">CLOSE</button>
+                    </div>
+                    {% csrf_token %}
+            </form>
+            </div>
+        </div>
+        <div style="display: none" id="sellDiv">
+            <div>
+                <h5 class="company"></h5>
+                <hr class="featurette-divider">
+            </div>
+            <form action="{% url 'sell_stock' game.id %}" method="post">
+                <div>
+                    <!-- how many shares to trade -->
+                    <input type="text" name="shares" id="sell-shares" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <span id="unit">SHARES</span>
+                    <br/>
+                    <small id="key">PRICE TYPE</small>
+                    <div class="form-group">
+                        <select class="selectpicker form-control col-sm-7" id="sell-selectpicker">
+                            <option value="Market">Market</option>
+                            {% if game.limit %}
+                            <option>Limit</option>
+                            {% endif %} {% if game.stop %}
+                            <option>Stop</option>
+                            {% endif %}
+                        </select>
+                        <div class="form-group col-sm-4 price-input">
+                            <label class="sr-only" for="exampleInputAmount">Price (in dollars)</label>
+                            <div class="input-group ">
+                                <div class="input-group-addon">$</div>
+                                <input class="form-control input-price" id="exampleInputAmount" name="sell-input-price" type="text" onkeypress="return isNumberKey(this, event);" disabled>
+                                <!-- stock name -->
+                                <input name="stock_name" type="hidden">
+                                <!-- stock market price -->
+                                <input id="market-price" type="hidden">
+                                <!-- stock stop/limit price(input by player) -->
+                                <input name="price" type="hidden">
+                                <input type="hidden" name="transaction_type" id="sell-type" value="SELL">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h5 id="summary">Order Summary</h5>
+                        </div>
+                        <table class="summary-table">
+                            <tr>
+                                <td class="td1">Price per share</td>
+                                <td class="td2" id="sell-share-price"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Shares</td>
+                                <td class="td2" id="sell-share-num"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Total</td>
+                                <td class="td2" id="sell-total-price"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card-block" id="popblock">
+                        <button type="submit" class="btn btn-success" id="tradeBtn">SUBMIT ORDER</button>
+                        <button class="trade_popup_close btn btn-danger" id="closeBtn">CLOSE</button>
+                    </div>
+                    {% csrf_token %}
+            </form>
+            </div>
+        </div>
+        <div style="display: none" id="coverDiv">
+            <div>
+                <h5 class="company"></h5>
+                <hr class="featurette-divider">
+            </div>
+            <form action="{% url 'sell_stock' game.id %}" method="post">
+                <div>
+                    <!-- how many shares to trade -->
+                    <input type="text" name="shares" id="cover-shares" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <span id="unit">SHARES</span>
+                    <br/>
+                    <small id="key">PRICE TYPE</small>
+                    <div class="form-group">
+                        <select class="selectpicker form-control col-sm-7" id="cover-selectpicker">
+                            <option value="Market">Market</option>
+                            {% if game.limit %}
+                            <option>Limit</option>
+                            {% endif %} {% if game.stop %}
+                            <option>Stop</option>
+                            {% endif %}
+                        </select>
+                        <div class="form-group col-sm-4 price-input">
+                            <label class="sr-only" for="exampleInputAmount">Price (in dollars)</label>
+                            <div class="input-group ">
+                                <div class="input-group-addon">$</div>
+                                <input class="form-control input-price" id="exampleInputAmount" name="cover-input-price" type="text" onkeypress="return isNumberKey(this, event);" disabled>
+                                <!-- stock name -->
+                                <input name="stock_name" type="hidden">
+                                <!-- stock market price -->
+                                <input id="market-price" type="hidden">
+                                <!-- stock stop/limit price(input by player) -->
+                                <input name="price" type="hidden">
+                                <input type="hidden" name="transaction_type" id="cover-type" value="COVER">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h5 id="summary">Order Summary</h5>
+                        </div>
+                        <table class="summary-table">
+                            <tr>
+                                <td class="td1">Price per share</td>
+                                <td class="td2" id="cover-share-price"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Shares</td>
+                                <td class="td2" id="cover-share-num"></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">Total</td>
+                                <td class="td2" id="cover-total-price"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card-block" id="popblock">
+                        <button type="submit" class="btn btn-success" id="tradeBtn">SUBMIT ORDER</button>
+                        <button class="trade_popup_close btn btn-danger" id="closeBtn">CLOSE</button>
+                    </div>
+                    {% csrf_token %}
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Include jQuery Popup Overlay -->
+<script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+<!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<script src="/static/js/jquery-ui.min.js"></script>
+<script src="/static/js/quote.js" type="text/javascript"></script>
+<script src="/static/js/control_tab.js" type="text/javascript"></script>
+<!-- <script src="/static/js/tab.js" type="text/javascript"></script> -->
+{% endblock %}

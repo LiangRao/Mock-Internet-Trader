@@ -1,0 +1,197 @@
+    #card-part {
+        background: white;
+        color: black;
+    }
+
+    #search-symbol {
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        height: 32px;
+        width: 60%;
+        border: 2px solid #b6b7bd;
+    }
+
+    .item-content {
+        display: inline-block;
+        height: 20px;
+    }
+
+    .card-item {
+        margin-left: 20px;
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    .item {
+        height: 25px;
+    }
+
+    .item-list {
+        display: inline-block;
+        margin-left: -40px;
+    }
+
+    .item-list li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    #join-btn {
+        background: #199ED8;
+        font-weight: bold;
+        margin-left: 20px;
+        height: 35px;
+        width: 70px;
+    }
+
+    #tradeBtn {
+        width: 250px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 50px;
+    }
+
+    #closeBtn {
+        width: 250px;
+    }
+
+    #popcard {
+        margin-top: 20px;
+        margin-left: 30px;
+        border-color: #37465C;
+        width: 600px;
+    }
+
+    #popheader {
+        height: 49px;
+        background: #444343;
+        color: white;
+        font-weight: bold;
+        border-color: #37465C;
+    }
+
+    #popblock {
+        color: white;
+        border-color: #37465C;
+    }
+
+    #key {
+        margin-left: 10px;
+        color: #777474;
+        font-size: 13px;
+    }
+
+    .company {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    #curQuote {
+        margin-left: 10px;
+        font-family: "Lucida Sans Unicode";
+        font-weight: bold;
+    }
+
+    .btn-default {
+        margin-top: 10px;
+        width: 190px;
+        background-color: white;
+        border-color: black;
+    }
+
+    .btn-group {
+        margin-left: 10px;
+    }
+
+    #sell-shares,
+    #short-shares,
+    #cover-shares,
+    #shares {
+        margin-left: 10px;
+        text-align: right;
+        width: 480px;
+        margin-bottom: 15px;
+        /*    border-width: 0;*/
+    }
+
+    #unit {
+        margin-left: 10px;
+        font-size: 20px;
+        font-family: sans-serif;
+        color: #909293;
+        margin-right: 0px;
+    }
+
+    #summary {
+        margin-left: 10px;
+        color: #2A6397;
+    }
+
+    .summary-table {
+        width: 580px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .summary-table,
+    .td1,
+    .td2 {
+        border: 1px solid #ddd;
+    }
+
+    .td2 {
+        text-align: right;
+        background-color: #E4E7EB;
+        width: 100px;
+    }
+
+    .form-group {
+        margin-left: 10px;
+    }
+
+    .ui-autocomplete {
+        max-height: 200px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+    }
+    /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+
+    * html .ui-autocomplete {
+        height: 100px;
+    }
+
+    td.overview-table {
+        width: 180px;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    td.overview-setting {
+        width: 250px;
+        height: 40px;
+        overflow: hidden;
+    }
+    .selectpicker{
+        display: inline-block;
+    }
+    .price-input{
+        display: inline-block;
+    }
+    .material-icons{
+        font-size:36px
+    }
+    #quoteImg{
+        width: 600px;
+        height:400px;
+    }
+    #popheader{
+        position:relative;
+    }
+    .trophy-icons{
+        font-size:28px;
+        border-color: black
+    }

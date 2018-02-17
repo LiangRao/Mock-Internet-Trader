@@ -1,0 +1,20 @@
+    #card-part {
+        background: white;
+        color: black;
+    }
+
+    #stock-graph {
+        margin-top: 15px;
+        width: 90%;
+        height: 500px;
+        margin-left: 50px;
+    }
+
+    .stock-info {
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    .bar-display{
+        position:relative;
+    }
